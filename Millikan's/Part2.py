@@ -42,7 +42,7 @@ np.savetxt('risevel.txt', vr, delimiter=',')
 #calculating the error for the velocity
 
 sig_t = 0.5
-sig_d = 0.05*10**(-3)
+sig_d = 0.05*10**(-3
 
     #fall velocity
 (uncv) = (vf)*((((sig_t)/tf)**2)+(((sig_d)/s)**2))**(1/2)
