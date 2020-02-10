@@ -67,11 +67,6 @@ np.savetxt('radius.txt', r,delimiter=',')
     #define the equation
 q, Vo, vfa, vri = sym.symbols('q Vo vfa vri')
 q = ((18*sym.pi*d)/Vo)*(((((na**3)*vfa)/(2*(do - da)*g)))**(1/2))*(vfa+vri)
-print(q)
-    #Evaluate the equation for the values for the charge
-qc = q.subs({Vo:V, vfa:vf, vri:vr})
-print(q)
-    #uncertainties
-sig_V = 0.5
-unq, uncv, unvr = sym.symbols(' unq uncv unvr ')
-unq = q*(((sym.diff(qc, V))**2)*(sig_V**2) + ((sym.diff(q, vf)**2)*uncv**2) + ((sym.diff(q, vr)**2)*unvr**2))**(1/2)
+
+plt.plot(vr, vf)
+plt.show()
