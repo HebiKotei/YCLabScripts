@@ -1,5 +1,5 @@
 '''
-Part 2 - Calculating the dynamic viscosity for the 40% solution, 
+Part 2 - Calculating the dynamic viscosity for the 40% solution,
 '''
 import numpy as np
 import matplotlib.pyplot as plt
@@ -59,4 +59,4 @@ plt.errorbar(1/T, np.log(visc[0]), yerr=yerr, fmt='k.', capsize=2)
 plt.plot(np.unique(1/T), np.poly1d(np.polyfit(1/T, np.log(visc[0]), 1))(np.unique(1/T)), 'r')
 plt.xlabel('1/T')
 plt.ylabel('ln(Viscosity)')
-plt.savefig('graph2.png')   
+plt.savefig('graph2.png')

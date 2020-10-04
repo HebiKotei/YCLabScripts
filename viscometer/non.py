@@ -55,7 +55,7 @@ sig = []
 
 for i in range(5):
     sig.append(C.subs({r:K, db:rb, df:rf, t:tsav[i]}))
-    
+
 sig1 = np.array(sig)
 
 print(linregress(np.unique(1/T), np.poly1d(np.polyfit(1/T, np.log(visc[0]), 1))(np.unique(1/T))))
@@ -67,4 +67,4 @@ yerr = err
 plt.errorbar(1/T, np.log(visc[0]), yerr=yerr, fmt='k.', capsize=5)
 plt.xlabel('1/T')
 plt.ylabel('ln(Viscosity)')
-plt.savefig('graph3.png')   
+plt.savefig('graph3.png')
